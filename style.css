@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'Sofia Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Sofia Sans', sans-serif; 
+    src: url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400&display=swap');
+  }
+/* css reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+* {
+    margin: 0;
+    --color: #2EC4B6;
+  }
+body { 
+    background-color:aliceblue ;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+input, button, textarea, select {
+    font: inherit;
+  }
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+#root, #__next {
+    isolation: isolate;
+  }
+
+main{ 
+    display: flex;
+    padding-inline-start: 140px;
+    padding-block-start: 50px;
+    gap: 120px;
+}
+
+
+
+.info {
+    position: relative;
+    top: 100px;
+}
+
+
+.info h1{
+    font-family: 'Sofia Sans', sans-serif;
+    color: #000B0A;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: -0.8px;
+    margin-block: 40px 20px;
+
+}
+
+.info p{
+    width:435px;
+    font-family: 'Sofia Sans', sans-serif;
+    color:  #737373;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; 
+}
+.invisible {
+    display: none;
+}
+
+.sec1 {
+    width: 580px;
+    height: fit-content;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.10);
+    margin: 0%;
+    padding: 40px;
+}
+
+.sec1 form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    color: var(--label-color);
+    font-family:'Sofia Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.1px;
+    width: 178px;
+    height: 25px;
+}
+
+[type="text"], [type="date"], select  {
+    width: 238px;
+    height: 48px;
+    border: 1px solid #F0F0F0 ; 
+    padding-left: 20px;
+    border-radius: 2px;
+} 
+#password:focus, select:focus, [name="text"] {
+    border: 1px solid rgba(0, 0, 255, 0.658);
+    outline: 0.5px;
+    color:#0c365a;
+    font-family:'Sofia Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    letter-spacing: 0.2px;
+    padding-left: 16px;
+}
+ select {
+    background-color: #FFF;
+    color: #737373;
+}
+ option {
+ color: #737373;
+}
+[name="activity_level"],[type="password"]{
+    width: 500px;
+    height: 48px;
+    border: 1px solid #F0F0F0 ; 
+    padding-left: 16px;
+}
+form :nth-child(8) {
+    position: relative;
+}
+:nth-child(8) img {
+    position: absolute;
+    top: 40px;
+    left: 480px;
+    color: #aaa;
+}
+button {
+    width: 500px;
+    height: 48px;
+    flex-shrink: 0;
+    background-color:var(--color);
+    filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.10));
+    color: #FFF;
+    text-align: center;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    border: 0;
+    margin-top: 10px;
+  }
+:nth-child(10) {
+    color: #000;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; 
+    margin: auto;
+}
+ 
+a {
+    color: var(--color);
+    text-decoration-line: underline;
+}
+header {
+    display: none;
+} 
+
+@media  (max-width: 1000px) {
+    main{
+      flex-direction: column;
+      gap: 50px;
+      width: 100%;
+   }
+   .info{
+       top : 16px
+   }
+   .info h1 {
+   margin-block:20px 10px ;
+   }
+}
+   
+   
+
+@media  (max-width: 750px) {
+body {
+    display: flex;
+}
+
+main {
+    width: 100%;
+    padding-block-start:24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline-start: 16px;
+}
+
+header {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    position: absolute;
+
+}
+ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 20px;
+}
+.time {
+    width: 54px;
+    /* position: absolute;
+    margin-inline-start: 10px; */
+    text-align: center;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; 
+    letter-spacing: -0.165px;
+}
+.status_bar {
+    position: absolute;
+    right: 10px;
+    height: 15px;
+    margin-inline-end: 10px;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-left: 80px;
+    top: 30px;
+    width:327px;
+    margin:auto;
+}
+.info img {
+    width: 38.667px;
+    height: 40px;
+    margin-block-start: 35px;
+}
+.info h1{
+    margin-block: 16px 8px ;
+    font-size: 30px;
+}
+.visible{
+    display: none;
+}
+.invisible{
+    display: block;
+}
+.info p{
+    font-size: 16px;
+    font-weight: 300;
+    width: fit-content;
+}
+.sec1{
+    width: 327px;
+    height: fit-content;
+    /*! margin-inline-start: 16px; */
+    padding: 16px;
+    display: flex;
+    /*! justify-content: center; */
+}
+.sec1 form{
+    display: block;
+    margin-bottom: 0%;
+}
+[type="text"], select, [type="date"], #activitylevel, [type="password"], button{
+    width: 295px;
+}
+:nth-child(8) img{
+    left: 270px;
+}
+
+section .sec1{
+    margin-block-start: 25px;
+}
+:nth-child(10) {
+    margin-block-end: 30px;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+}
+   
